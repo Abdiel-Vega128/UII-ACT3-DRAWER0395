@@ -1,3 +1,4 @@
+#PROMPT
 Este es el "Prompt de Ingeniería" definitivo. Está diseñado con un nivel de detalle técnico tan alto que cualquier IA (como GPT-4, Claude o yo mismo) generará el código exacto, con la estructura de archivos y el diseño visual que hemos perfeccionado, sin margen de error.
 
 🇮🇹 Prompt Maestro de Alta Precisión: App Móvil "ITA Ristorante"
