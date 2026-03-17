@@ -1,82 +1,65 @@
 #PROMPT
-Este es el "Prompt de Ingeniería" definitivo. Está diseñado con un nivel de detalle técnico tan alto que cualquier IA (como GPT-4, Claude o yo mismo) generará el código exacto, con la estructura de archivos y el diseño visual que hemos perfeccionado, sin margen de error.
+Rol de la IA: Actúa como desarrollador Senior de Flutter.
+Objetivo: Generar un único archivo main.dart completamente funcional para el restaurante "ITA".
 
-🇮🇹 Prompt Maestro de Alta Precisión: App Móvil "ITA Ristorante"
-Rol de la IA: Actúa como un Desarrollador Senior de Flutter experto en arquitectura limpia y UI/UX de alta gama.
+1. Configuración Global y Estilo:
 
-Objetivo: Generar un proyecto de Flutter estructurado en múltiples archivos que represente la identidad de un restaurante italiano de lujo llamado "ITA".
+Tema: Crear un MaterialApp con useMaterial3: true.
 
-1. Identidad Visual y Restricciones Estéticas (UI/UX)
-Paleta de Colores: * Primario: Verde Italiano (#2E7D32).
+Colores: Verde (#2E7D32), Blanco (#FCFCFC) y Rojo (#C62828).
 
-Secundario/Acento: Rojo Pomodoro (#C62828).
+Tipografía: Usar fuente tipo Serif (estilo Georgia).
 
-Fondo: Blanco Hueso (#FCFCFC).
+REGLA CRÍTICA: No usar fontWeight en ningún widget de texto. La jerarquía se debe crear mediante fontSize, letterSpacing elevado (de 2 a 10) y el uso de mayúsculas (.toUpperCase()).
 
-Textos: Negro Carbono (#212121) con opacidades variables.
+2. Navegación por Rutas Nombradas:
 
-Tipografía: Usar una fuente tipo Serif (estilo Georgia o de sistema).
+Implementar el mapa de routes en MaterialApp para:
 
-REGLA DE ORO: Prohibido el uso de fontWeight. La jerarquía debe establecerse exclusivamente mediante:
-
-Tamaño: Títulos grandes vs. subtítulos pequeños.
-
-Letter Spacing: Espaciado de letras amplio (entre 2.0 y 10.0) para títulos.
-
-Case: Uso de Mayúsculas (UPPERCASE) para elementos de navegación y títulos.
-
-2. Arquitectura de Navegación (Named Routes)
-Configurar el MaterialApp en main.dart con un mapa de rutas estricto:
-
-'/': Home/Bienvenida.
+'/': Inicio (Home).
 
 '/comida': Sección de platos.
 
-'/bebidas': Sección de bar/coctelería.
+'/bebidas': Sección de bar.
 
-'/favoritos': Sección de guardados.
+'/favoritos': Sección de destacados.
 
-'/amigos': Sección de fidelización/social.
+'/amigos': Sección social.
 
-3. Especificaciones del Componente: CustomDrawer
-Estructura: Drawer con ancho de 300px y bordes rectos (sin redondeo lateral).
+3. Diseño del Drawer (Menú Lateral):
 
-Header (UserAccountsDrawerHeader o Container personalizado):
+Encabezado: Un fondo verde sólido (#2E7D32) con un CircleAvatar blanco, el nombre "RESTAURANTE ITA" en mayúsculas, dirección física, teléfono y correo electrónico: "contacto@ita-restaurante.com".
 
-Fondo: Verde sólido (#2E7D32).
+Opciones: 4 elementos ListTile con iconos rojos (#C62828) en estilo outlined. Al tocar, deben usar Navigator.pushReplacementNamed.
 
-Avatar: CircleAvatar con borde blanco, cargando una imagen de logo desde la red.
+4. Estructura de las Páginas:
 
-Información: Nombre "RESTAURANTE ITA", Dirección física "Calle Italiana 123", Teléfono "+54 9 11 1234-5678" y Email "contacto@ita-restaurante.com".
+AppBar: Logo centralizado usando RichText: "I" (verde), "T" (gris), "A" (rojo) con espaciado de letras de 5.
 
-Cuerpo: Lista de ListTile con iconos outlined. El icono debe ser Rojo (#C62828).
+Contenido (Body):
 
-Lógica: Al hacer clic, debe ejecutar Navigator.pop(context) seguido de Navigator.pushNamed(context, ruta).
+Una imagen circular de 200x200 píxeles centrada (usar Image.network desde GitHub o Pexels).
 
-4. Especificaciones del Componente: PaginaSeccion (Plantilla)
-AppBar: Transparente, sin sombra. El título debe ser un RichText con el logo "ITA" (I-Verde, T-Gris, A-Rojo) con letterSpacing: 5.
+La imagen debe tener un borde fino y una sombra suave.
 
-Imagen Principal: * Tamaño exacto: 200x200.
+Debajo de la imagen: Título de la sección en mayúsculas, tamaño 32, color verde y letterSpacing: 10.
 
-Forma: Circular (BoxShape.circle).
+Un divisor rojo de 50px de ancho debajo del título.
 
-Efecto: Sombra difusa (BoxShadow) de color negro con 0.05 de opacidad.
+Un subtítulo inferior con lema en gris y letterSpacing: 4.
 
-Fuente: Cargar desde URL de GitHub o red (Pexels/Unsplash).
+5. Requisito de Código: Todo el código (clases de páginas, widget del drawer y lógica de rutas) debe estar contenido en el mismo bloque de código para ser copiado directamente en main.dart.
 
-Tipografía de Sección:
+<img width="1216" height="707" alt="image" src="https://github.com/user-attachments/assets/b96f14ab-d70a-43c4-a3d9-45a8778210ba" />
+<img width="1225" height="718" alt="image" src="https://github.com/user-attachments/assets/209cef24-9e79-40c3-850c-dbd08f5191ca" />
+<img width="1218" height="710" alt="image" src="https://github.com/user-attachments/assets/36516648-0cfd-48db-84fa-94bb5a17124d" />
+<img width="1209" height="699" alt="image" src="https://github.com/user-attachments/assets/a1909dab-e16d-40fb-83b1-5b129320f249" />
+<img width="1211" height="718" alt="image" src="https://github.com/user-attachments/assets/3f0b88d9-9efe-4f8a-ab3b-dfde58b65484" />
+#Android
+<img width="417" height="691" alt="image" src="https://github.com/user-attachments/assets/95a69bc1-ba0a-4432-9082-fbcb1075aba4" />
+<img width="428" height="715" alt="image" src="https://github.com/user-attachments/assets/a0e4ce11-cf37-4a61-8d1c-48c15c6623a0" />
+<img width="475" height="734" alt="image" src="https://github.com/user-attachments/assets/ecbad749-7526-4663-a4fc-61ea7db46439" />
+<img width="452" height="739" alt="image" src="https://github.com/user-attachments/assets/fcd6484e-fafe-4318-a4e1-682093a5fa31" />
+<img width="448" height="716" alt="image" src="https://github.com/user-attachments/assets/9b55447d-0f57-42da-8dd4-7c14548c6ee0" />
 
-Título: Debajo de la imagen, en Mayúsculas, tamaño 32-34, letterSpacing: 10.
 
-Divisor: Una línea horizontal roja de 50px de ancho y 1.5px de grosor.
-
-Lema: Un pequeño texto inferior (ej: "SABOR TRADICIONAL") con letterSpacing: 4.
-
-5. Estructura de Archivos Requerida
-Divide el código en:
-
-lib/main.dart: Configuración global y rutas.
-
-lib/widgets/custom_drawer.dart: Lógica y diseño del menú lateral.
-
-lib/pages/pagina_seccion.dart: Widget reutilizable para las 4 pantallas
